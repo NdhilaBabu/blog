@@ -223,7 +223,7 @@ nav ul li a:hover::after{
 .dance-text, .travel-text, .cook-text{
     margin-top: 60px;
 }
-li.nav-item {
+li.navbar-item {
     float: right;
     list-style: none;
 }
