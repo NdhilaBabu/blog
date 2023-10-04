@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Aish</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav class ="header-1">
+                    <div class="logo2">
+                    <img src="images/logo.png">
+                    </div>
+                    <ul>
+                        <li class="nav-item"><a class="nav-link"  href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
+                    </ul>
+                </nav>
+             </div>
+             <div id="aboutme">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-column-2">
+                            <h1 class="title">About Me</h1><br>
+                            <p><em>I am a master's student at University of Aberdeen studying information technology</em></p>
+                            <br>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education </p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Agile Methodologies</span><br><em>Following the set of approaches and practices for software development and project management.</em></li>
+                                    <li><span>Quick Learner</span><br><em>Adapting to new situations, environments, and challenges</em></li>
+                                    <li><span>Team Player</span><br><em>Work collaboratively and effectively with other team members</em></li>
+                                    <li><span>Web Development</span><br><em>Creating websites and web applications.</em></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Software Engineer</span><br><em>H&M</em></li>
+                                    <li><span>Assistant System Engineer</span><br><em>Tata Consultancy Services</em></li>      
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Msc Information technology</span><br><em>University of Aberdeen</em></li>
+                                    <li><span>Bachelors of Technology in Computer Science</span><br><em>APJ Abdul Kalam Technical University</em></li>
+                                    <li><span>Higher Secondary - Computer Science</span><br><em>Indian Certificate of Secondary Education Board</em></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+        </div>
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
